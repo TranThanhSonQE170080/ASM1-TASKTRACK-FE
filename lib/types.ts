@@ -21,6 +21,30 @@ export interface Tag {
   tagName: string;
   color?: string | null;
 }
+export interface Account {
+  accountID: number;
+  fullName: string;
+  email: string;
+  role: number;            // 0 = Staff, 1 = Admin
+  createdDate: string;
+}
+export interface LoginResponse {
+  token: string;
+  account: Account;
+}
+export interface LoginDTO {
+  email: string;
+  password: string;
+}
+export interface RegisterDTO {
+  fullName: string;
+  email: string;
+  password: string;
+}
+export interface AccountUpdateDTO {
+  fullName?: string | null;
+  role?: number | null;
+}
 export interface Task {
   taskID: number;
   title: string;
