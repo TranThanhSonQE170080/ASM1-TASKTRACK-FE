@@ -40,6 +40,7 @@ export interface RegisterDTO {
   fullName: string;
   email: string;
   password: string;
+  confirmPassword: string;
 }
 export interface AccountUpdateDTO {
   fullName?: string | null;
